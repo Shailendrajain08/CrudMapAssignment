@@ -1,27 +1,56 @@
-# AngularCrudMap
+# Angular CRUD with Google Address Autocomplete and Mapbox Integration
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+## Overview
 
-## Development server
+This project is an Angular application that demonstrates basic CRUD operations, Google Address Autocomplete, and Mapbox integration. The application allows users to enter pickup and dropoff addresses, view a route between them on a Mapbox map, and perform CRUD operations.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **CRUD Operations**: Basic Create, Read, Update, and Delete operations using a simple JSON server.
+- **Google Address Autocomplete**: Autocompletes addresses for both pickup and dropoff locations using Google Places API.
+- **Mapbox Integration**: Displays a route between the pickup and dropoff addresses on a Mapbox map.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Prerequisites
 
-## Build
+Before you begin, ensure you have met the following requirements:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Node.js and npm installed on your machine.
+- Angular CLI installed globally (`npm install -g @angular/cli`).
+- A free Google API key for Places API.
+- A free Mapbox API token.
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository:
 
-## Running end-to-end tests
+   ```bash
+   git clone https://github.com/yourusername/angular-crud-map.git
+   cd angular-crud-map
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```
 
-## Further help
+2. Install the dependencies:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+  npm install
+
+3. Install json-server for the backend:
+
+  npm install -g json-server
+
+4. Set up your API keys:
+
+  Replace your-google-api-key in index.html with your Google API key.
+  Replace your-mapbox-access-token in mapbox.component.ts with your Mapbox token.
+
+
+## Running the Application
+
+1. Start the JSON server:
+
+    json-server --watch db.json
+
+2. Run the Angular application:
+
+    ng serve
+
+3. Open your browser and navigate to http://localhost:4200.

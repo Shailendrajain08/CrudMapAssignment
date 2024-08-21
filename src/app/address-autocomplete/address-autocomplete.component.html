@@ -1,0 +1,12 @@
+<div>
+  <mat-form-field class="inputMap">
+    <input matInput type="text" (input)="onInput($event)" placeholder="Enter address">
+  </mat-form-field>
+  <ul>
+    <li *ngFor="let prediction of predictions"(click)="selectPrediction(prediction)"> {{ prediction.description}}</li>
+  </ul>
+</div>
+
+<div>
+  <app-mapbox/>
+</div>
